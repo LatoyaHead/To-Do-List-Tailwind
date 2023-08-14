@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="">
+  <title>To-Do List</title>
+</head>
+
+<body class="overflow-hidden bg-gradient-to-r from-purple-800 via-purple-500 to-purple-400">
+  <div class="flex p-6 items-center max-sm:flex-col"><!--container-->
+    <div class="flex flex-row max-sm:items-center justify-center">
+      <img src="./img/5f99d42726d61b0004c92f7a.png" alt="woman" class="w-1/2 h-full max-sm:w-3/12">
+      <div class="text-3xl leading-10 w-60 font-bold p-6 items-center text-black max-sm:text-xl"><h3>I made a huge to do list for today. I just can't figure out who's going to do it.</h3></div>
+    </div>
+    <div class="flex items-center w-6/12 max-lg:w-full"><!--to-do-container-->
+      <div class="flex flex-col overflow-hidden gap-5 p-5 bg-black max-w-sm mx-auto h-4/5 rounded-lg shadow-indigo-500/50"><!--to-do-card-->
+        <h1 class="text-white text-center text-xl font-bold">To-Do List</h1>
+      <div class="flex justify-between rounded-2xl bg-white"><!--input container-->
+        <input type="text" id="todo-input" class="border-none focus:outline-none p-2.5 rounded-full w-full" placeholder="Add a new task" />
+        <button id="add-task-btn" class="border-none rounded-lg bg-purple-800 text-white p-2">Add Task</button>
+      </div>
+      <ul id="todo-list" class=" flex flex-col gap-2 list-none p-0 overflow-y-auto h-80 text-white"></ul>
+    </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
