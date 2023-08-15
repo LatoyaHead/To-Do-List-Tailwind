@@ -18,7 +18,7 @@ const addTask = () => {
 //Create new Task Items
 const createTaskItem = (taskText) => {
   const taskItem = document.createElement('li')
-  taskItem.className = 'flex text-center bg-white text-black p-2 justify-between rounded-lg mb-[5px]'
+  taskItem.className = 'flex text-center bg-white text-black p-2 justify-between rounded-lg mb-[5px] items-center'
 
 
   const checkbox = document.createElement('input')
@@ -49,12 +49,11 @@ const deleteTask = (event) => {
 
 //Cross out Task
 const toggleTask = (event) => {
-  const taskItem = event.target.parentNode
-  taskItem.classList.toggle('completed')
+  const span =  event.target.parentNode.childNodes[1]
   if (event.target.checked) {
-    taskItem.className = 'line-through flex text-center bg-white text-black p-2 justify-between rounded-lg mb-1'
-  }else {
-    taskItem.className = 'flex text-center bg-white text-black p-2 justify-between rounded-lg mb-1'
+    span.className='line-through'
+  }else{
+    span.className=''
   }
 
 }
